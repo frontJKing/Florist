@@ -1,0 +1,62 @@
+import "@/styles/animations.css";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function HeaderContact() {
+  return (
+    <section className="relative w-full font-family-nunito -mt-20 md:-mt-32 pt-28 md:pt-32 min-h-[70vh] md:h-[760px] overflow-hidden z-0">
+      <Image
+        src="/I_M-152.jpg"
+        alt="Florystyka ślubna — Daniel En Flores"
+        fill
+        priority
+        className="object-cover object-center z-0"
+      />
+
+      {/* overlay */}
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/35 to-black/60 z-10" />
+
+      <div className="absolute inset-0 flex items-center justify-center z-20">
+        <div className="text-center text-white px-6 pt-12 max-w-5xl mx-auto">
+          {/* H1 */}
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-family-overlock font-bold lg:text-7xl tracking-tight sm:tracking-widest text-white drop-shadow-lg mb-4 md:mb-6">
+            Skontaktuj się z nami
+          </h1>
+
+          {/* podtytuł */}
+          <p className="mt-2 text-sm sm:text-base md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+            Masz pytania? Chcesz złożyć zamówienie lub dowiedzieć się więcej o
+            naszych usługach? Napiszemy szybko i odpowiemy na wszystkie pytania.
+          </p>
+
+          {/* CTA */}
+          <div className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4 w-full px-4">
+            {/* PRIMARY – butelkowa zieleń */}
+            <Link
+              href="#form"
+              aria-label="Umów konsultację"
+              className="inline-flex items-center justify-center w-full sm:w-[220px] max-w-md px-6 py-3 rounded-full
+                         bg-emerald-950 text-white font-semibold
+                         hover:bg-emerald-900
+                         transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-emerald-200"
+            >
+              Umów konsultację
+            </Link>
+
+            {/* SECONDARY */}
+            <a
+              href="/wedding"
+              aria-label="Zobacz pakiety"
+              className="inline-flex items-center justify-center w-full sm:w-[220px] max-w-md px-6 py-3 rounded-full
+                         border border-white/40 text-white/90 font-semibold
+                         hover:border-white/70 hover:text-white
+                         transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-white/30"
+            >
+              Zobacz pakiety
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

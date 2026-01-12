@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-overlock: var(--font-overlock);
+  --font-family-nunito: var(--font-nunito);
+
+  --color-brand-primary: #818cf8;
+  --color-midnight: #1e1b4b;
+  --color-tahiti: #67e8f9;
+  --color-bermuda: #a7f3d0;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff; /* Domyślny kolor tła dla trybu jasnego */
+    --foreground: #0a0a0a; /* Domyślny kolor tekstu dla trybu jasnego */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a; /* Kolor tła dla trybu ciemnego */
+      --foreground: #ededed; /* Kolor tekstu dla trybu ciemnego */
+    }
+  }
+}
+
+body {
+  /* 
+    Nie ma potrzeby definiować tutaj `font-family`, 
+    ponieważ jest to zarządzane przez `next/font` w pliku layout.tsx.
+    Klasa `font-nunito` na tagu <body> już to załatwia.
+  */
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer utilities {
+  .font-nunito {
+    font-family: var(--font-family-nunito), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .font-overlock {
+    font-family: var(--font-family-overlock), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
