@@ -176,12 +176,6 @@ export default function Menu() {
                 </Link>
                 <Link
                   className="px-2 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-900 after:transition-all hover:after:w-full"
-                  href="/about"
-                >
-                  Galeria
-                </Link>
-                <Link
-                  className="px-2 py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-emerald-900 after:transition-all hover:after:w-full"
                   href="/contact"
                 >
                   Kontakt
@@ -327,13 +321,6 @@ export default function Menu() {
               className="px-4 py-3 rounded-xl font-extrabold uppercase text-emerald-900 hover:bg-emerald-50"
             >
               Imprezy okolicznościowe
-            </Link>
-            <Link
-              onClick={closeMenu}
-              href="/about"
-              className="px-4 py-3 rounded-xl font-extrabold uppercase text-emerald-900 hover:bg-emerald-50"
-            >
-              Galeria
             </Link>
             <Link
               onClick={closeMenu}
