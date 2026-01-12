@@ -16,9 +16,13 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [currentMonth, setCurrentMonth] = useState(new Date(2026, 6)); // Lipiec 2026
+  const [currentMonth, setCurrentMonth] = useState(new Date()); // Aktualny miesiąc
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -194,7 +198,7 @@ export default function ContactPage() {
               </div>
               <h3 className="font-semibold">Email</h3>
               <a
-                href="mailto:kwiartikaski@gmail.com"
+                href="mailto:danielenflores@gmail.com"
                 className="text-emerald-700 hover:underline font-medium"
               >
                 danielenflores@gmail.com
@@ -409,7 +413,8 @@ export default function ContactPage() {
                         value={formData.eventDate}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-emerald-200 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-700"
+                        readOnly
+                        className="w-full px-4 py-3 border border-emerald-200 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-700 bg-gray-50"
                       />
                     </div>
                   </div>
